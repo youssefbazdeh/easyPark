@@ -1,3 +1,4 @@
+import { truncate } from 'fs';
 import mongoose from 'mongoose';
 const { Schema, model } = mongoose;
 
@@ -10,7 +11,7 @@ const parkingSchema = new Schema(
         },
         price: {
             type: String,
-            unique: false,
+            unique: true,
             required: false
         },
         user_id: {
